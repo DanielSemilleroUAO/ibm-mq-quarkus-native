@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Payment>
+    <PaymentId>00000</PaymentId>
+    <Amount>1000</Amount>
+</Payment>

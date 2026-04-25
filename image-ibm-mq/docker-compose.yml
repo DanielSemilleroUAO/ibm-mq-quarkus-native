@@ -1,0 +1,30 @@
+services:
+  ibm-mq:
+    image: icr.io/ibm-messaging/mq:9.3.5.1-r2
+    platform: linux/amd64
+    container_name: ibm-mq-server
+    ports:
+      - "1414:1414"      # Client channel listener
+      - "9443:9443"      # MQ Console (HTTPS)
+    environment:
+      LICENSE: accept
+      MQ_QMGR_NAME: QM1
+      MQ_ADMIN_PASSWORD: "admin"  # Cambiar en producción
+      MQ_APP_PASSWORD: "app"      # Cambiar en producción
+    volumes:
+      - mq-data:/mnt/mqm
+      - ./mq-config:/etc/mqm/init.d:ro
+    healthcheck:
+      test: ["CMD", "dspmq", "-n", "QM1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mq-network
+
+networks:
+  mq-network:
+    driver: bridge
+
+volumes:
+  mq-data:

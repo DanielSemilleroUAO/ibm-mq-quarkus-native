@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cbe:CommonBaseEvent xmlns:cbe="http://www.ibm.com/AC/commonbaseevent1_0_1"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     version="1.0.1" creationTime="2026-04-16T20:00:00.000+00:00">
+    <cics:event xmlns:cics="http://www.ibm.com/xmlns/prod/cics/events/CBE">
+        <cics:context-info>
+            <cics:eventname>BasicAccountInfoCreatedOrUpdated</cics:eventname>
+            <cics:timestamp>2026-04-16T20:00:00.000+00:00</cics:timestamp>
+            <cics:bindingname>AccountBasicInfoChange</cics:bindingname>
+            <cics:capturespecname>BasicInfoImpacsAccountUpdated</cics:capturespecname>
+        </cics:context-info>
+        <cics:payload-data>
+            <data:payload xmlns:data="http://www.ibm.com/prod/cics/BasicAccountInfoCreatedOrUpdated">
+                <data:Ctl1>04</data:Ctl1>
+                <data:Ctl2>001</data:Ctl2>
+                <data:Ctl3>000</data:Ctl3>
+                <data:Ctl4>0001</data:Ctl4>
+                <data:AccountNumber>00000000088252</data:AccountNumber>
+                <data:Status>00</data:Status>
+                <data:ProductType>010</data:ProductType>
+                <data:FloatAmount>400.00</data:FloatAmount>
+                <data:AvailAmount>690668069.00</data:AvailAmount>
+                <data:CurrentBalance>690668469.00</data:CurrentBalance>
+            </data:payload>
+        </cics:payload-data>
+    </cics:event>
+</cbe:CommonBaseEvent>
+
+
+        <?xml version="1.0"?>
+<cbe:CommonBaseEvent xmlns:cbe="http://www.ibm.com/AC/commonbaseevent1_0_1"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     version="1.0.1" creationTime="2026-04-16T20:00:00.000+00:00">
+<cics:event xmlns:cics="http://www.ibm.com/xmlns/prod/cics/events/CBE">
+    <cics:context-info>
+        <cics:eventname>BasicAccountInfoCreatedOrUpdated</cics:eventname>
+        <cics:capturespecname>BasicInfoImpacsAccountUpdated</cics:capturespecname>
+    </cics:context-info>
+    <cics:payload-data>
+        <data:payload xmlns:data="http://www.ibm.com/prod/cics/BasicAccountInfoCreatedOrUpdated">
+            <data:AccountNumber>00000000088252</data:AccountNumber>
+            <data:Status>00</data:Status>
+            <data:FloatAmount>400.00</data:FloatAmount>
+            <data:AvailAmount>690668069.00</data:AvailAmount>
+            <data:CurrentBalance>690668469.00</data:CurrentBalance>
+        </data:payload>
+    </cics:payload-data>
+</cics:event>
+</cbe:CommonBaseEvent>
